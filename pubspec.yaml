@@ -19,6 +19,12 @@ dependencies:
   share_plus: ^7.2.1
   hive: ^2.2.3
   hive_flutter: ^1.1.0
+  archive: ^3.4.8
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.15.3
+  google_sign_in: ^6.2.1
+  cloud_firestore: ^4.13.6
+  intl: ^0.18.0
 
 dev_dependencies:
   flutter_test:

@@ -12,8 +12,8 @@ import '../../Global/functions.dart';
 import '../../Resources/strings.dart';
 
 class GamePage extends StatefulWidget {
-  GamePage({Key? key}) : super(key: key);
-  @override
+   final Function(int) updateHighScore;
+  GamePage({required Key? key, required this.updateHighScore}) : super(key: key);@override
   State<GamePage> createState() => _GamePageState();
 }
 class _GamePageState extends State<GamePage> {
@@ -112,6 +112,7 @@ class _GamePageState extends State<GamePage> {
         setState(() {
           if (score == topScore) {
             topScore++;
+            widget.updateHighScore(topScore);
           }
           score++;
         });

@@ -19,7 +19,7 @@ Text myText(String txt, Color? color, double size){
 ElevatedButton gameButton(VoidCallback? onPress, String txt, Color color){
   return ElevatedButton(
     onPressed: onPress,
-    style: ElevatedButton.styleFrom(primary: color),
+    style: ElevatedButton.styleFrom(backgroundColor: color),
     child: myText(txt,Colors.white,20),
   );
 }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "383938853899",
+    "project_id": "flappygoose",
+    "storage_bucket": "flappygoose.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383938853899:android:2021ec211d8b8d18101b0e",
+        "android_client_info": {
+          "package_name": "com.example.flappy_bird"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv7XsIKbFFPEc66cs08w4_Id-Xr8fahXA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

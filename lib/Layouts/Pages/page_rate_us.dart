@@ -32,7 +32,7 @@ class RateUs extends StatelessWidget {
                   height: 50,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.cyan.shade300,
+                      backgroundColor: Colors.cyan.shade300,
                     ),
                     onPressed: (){
                       Share.share("https://github.com/moha-b/Flappy-Bird/releases/download/v.0.4.2/app-release.apk");

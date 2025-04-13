@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors
-import 'package:flappy_bird/Layouts/Pages/page_game.dart';
-import 'package:flappy_bird/Layouts/Pages/page_settings.dart';
 import 'package:flutter/material.dart';
 import '../Layouts/Pages/page_rate_us.dart';
 import '../Layouts/Pages/page_start_screen.dart';
 import '../Resources/strings.dart';
+import '../Layouts/Pages/page_game.dart';
+import '../Layouts/Pages/page_settings.dart';
 
 class AppRoute{
   Route? generateRoute(RouteSettings settings){
@@ -18,7 +18,7 @@ class AppRoute{
       case Str.settings:
         return MaterialPageRoute(builder: (_) => Settings());
       default:
-        _errorRoute();
+        return null;
     }
   }
 
