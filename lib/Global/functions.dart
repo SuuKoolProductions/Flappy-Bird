@@ -53,30 +53,32 @@ AlertDialog dialog(BuildContext context){
 }
 
 void init() {
-  if(read("score") != null){
-    topScore = read("score");
+  final db = Database();
+  
+  if(db.read("score") != null){
+    topScore = db.read("score");
   }else{
-    write("score", topScore);
+    db.write("score", topScore);
   }
-  if(read("background") != null){
-    Str.image = read("background");
+  if(db.read("background") != null){
+    Str.image = db.read("background");
   }else{
-    write("background", Str.image);
+    db.write("background", Str.image);
   }
-  if(read("bird") != null){
-    Str.bird = read("bird");
+  if(db.read("bird") != null){
+    Str.bird = db.read("bird");
   }else{
-    write("bird", Str.bird);
+    db.write("bird", Str.bird);
   }
-  if(read("level") != null){
-    barrierMovement = read("level");
+  if(db.read("level") != null){
+    barrierMovement = db.read("level");
   }else{
-    write("level", barrierMovement);
+    db.write("level", barrierMovement);
   }
-  if(read("audio") != null){
-    play = read("audio");
+  if(db.read("audio") != null){
+    play = db.read("audio");
   }else{
-    write("audio", play);
+    db.write("audio", play);
   }
   if(play){
     player.play(AssetSource("audio/Tintin.mp3"));

@@ -12,7 +12,7 @@ class AppRoute{
       case Str.home:
         return MaterialPageRoute(builder: (_) => StartScreen());
       case Str.gamePage:
-        return MaterialPageRoute(builder: (_) => GamePage());
+        return MaterialPageRoute(builder: (_) => GamePage(key: UniqueKey(), updateHighScore: (int score) {}));
       case Str.rateUs:
         return MaterialPageRoute(builder: (_) => RateUs());
       case Str.settings:

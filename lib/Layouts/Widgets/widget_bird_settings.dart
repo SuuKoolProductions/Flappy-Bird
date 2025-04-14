@@ -1,13 +1,20 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flappy_bird/Database/database.dart';
-import 'package:flappy_bird/Resources/strings.dart';
+import 'package:flappy_bird/Global/strings.dart';
 import 'package:flutter/material.dart';
 
 import '../../Global/functions.dart';
 
-class BirdSettings extends StatelessWidget {
+class BirdSettings extends StatefulWidget {
   const BirdSettings({Key? key}) : super(key: key);
+
+  @override
+  State<BirdSettings> createState() => _BirdSettingsState();
+}
+
+class _BirdSettingsState extends State<BirdSettings> {
+  final Database db = Database();
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +28,10 @@ class BirdSettings extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () {
-                Str.bird = "assets/pics/bird.png";
-                write("bird", Str.bird);
+                setState(() {
+                  Str.bird = "assets/pics/bird.png";
+                  db.write("bird", Str.bird);
+                });
               },
               child: SizedBox(
                 width: 75,
@@ -35,8 +44,10 @@ class BirdSettings extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Str.bird = "assets/pics/blue.png";
-                write("bird", Str.bird);
+                setState(() {
+                  Str.bird = "assets/pics/blue.png";
+                  db.write("bird", Str.bird);
+                });
               },
               child: SizedBox(
                 width: 75,
@@ -49,8 +60,10 @@ class BirdSettings extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Str.bird = "assets/pics/green.png";
-                write("bird", Str.bird);
+                setState(() {
+                  Str.bird = "assets/pics/green.png";
+                  db.write("bird", Str.bird);
+                });
               },
               child: SizedBox(
                 width: 75,

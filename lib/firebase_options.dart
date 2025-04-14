@@ -71,4 +71,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'flappygoose.firebasestorage.app',
     iosBundleId: 'com.example.flappyBird',
   );
+
 }

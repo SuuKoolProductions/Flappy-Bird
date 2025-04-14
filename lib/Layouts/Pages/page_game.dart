@@ -17,6 +17,13 @@ class GamePage extends StatefulWidget {
   State<GamePage> createState() => _GamePageState();
 }
 class _GamePageState extends State<GamePage> {
+  late Database db;
+
+  @override
+  void initState() {
+    super.initState();
+    db = Database();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -104,8 +111,8 @@ class _GamePageState extends State<GamePage> {
     /* <  Calculate Score  > */
     Timer.periodic(Duration(seconds: 2), (timer) {
       if (birdIsDead()) {
-        // Todo : save the top score in the database  <---
-        write("score", topScore);
+        // Save the top score in the database
+        db.write("score", topScore);
         timer.cancel();
         score = 0;
       } else {
